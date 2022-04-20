@@ -1,0 +1,88 @@
+.planner-with-checkboxes-and-filter-section {
+  padding-top: 20px;
+}
+
+.planner-title {
+  text-align: center;
+}
+.planner-container {
+  display: flex;
+  justify-content: center;
+}
+.planner {
+  background-color: mistyrose;
+  padding: 20px;
+  width: 500px;
+  min-width: 280px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planner-action-container {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.planner-task-input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 0 8px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px 0 inset;
+  border-radius: 4px;
+  outline: none;
+}
+
+.planner-btn-add {
+  background-color: darkcyan;
+  color: azure;
+  font-weight: bold;
+  border: none;
+  padding: 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: teal;
+  }
+}
+
+.planner-task {
+  display: flex;
+}
+
+.planner-task-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.planner-filter-btn-container {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.planner-filter-btn-container button {
+  background-color: hotpink;
+  color: azure;
+  border: none;
+  padding: 4px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: deeppink;
+  }
+
+  &:disabled {
+    background-color: lightpink;
+  }
+}

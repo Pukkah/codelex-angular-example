@@ -1,0 +1,44 @@
+<section class="planner-with-checkboxes-and-filter-section">
+
+  <h1 class="planner-title">Planner With Checkboxes</h1>
+
+  <div class="planner-container">
+    <div class="planner">
+
+      <div class="planner-action-container">
+        <input
+          [(ngModel)]="inputValue"
+          (keydown.enter)="addTask()"
+          class="planner-task-input"
+          type="text"
+          placeholder="Add new task..."
+        />
+        <button (click)="addTask()" class="planner-btn-add">
+          Add
+        </button>
+      </div>
+
+      <div *ngFor="let task of getFilteredTasks()" class="planner-task">
+        <div>
+          <input
+            [checked]="task.done"
+            (change)="setTaskDone($event, task.id)"
+            class="planner-task-checkbox"
+            type="checkbox"
+          />
+        </div>
+        <div>
+          <p>{{ task.text }}</p>
+        </div>
+      </div>
+
+      <div class="planner-filter-btn-container">
+        <button (click)="setTaskFilter(plannerTaskFilterEnum.ALL)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.ALL">All</button>
+        <button (click)="setTaskFilter(plannerTaskFilterEnum.DONE)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.DONE">DONE</button>
+        <button (click)="setTaskFilter(plannerTaskFilterEnum.TODO)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.TODO">TODO</button>
+      </div>
+
+    </div>
+  </div>
+
+</section>
