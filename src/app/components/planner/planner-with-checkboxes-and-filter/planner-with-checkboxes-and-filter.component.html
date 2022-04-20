@@ -1,6 +1,6 @@
 <section class="planner-with-checkboxes-and-filter-section">
 
-  <h1 class="planner-title">Planner With Checkboxes</h1>
+  <h1 class="planner-title">Planner with Checkboxes and Filter</h1>
 
   <div class="planner-container">
     <div class="planner">
@@ -33,7 +33,7 @@
       </div>
 
       <div class="planner-filter-btn-container">
-        <button (click)="setTaskFilter(plannerTaskFilterEnum.ALL)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.ALL">All</button>
+        <button (click)="setTaskFilter(plannerTaskFilterEnum.ALL)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.ALL">ALL</button>
         <button (click)="setTaskFilter(plannerTaskFilterEnum.DONE)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.DONE">DONE</button>
         <button (click)="setTaskFilter(plannerTaskFilterEnum.TODO)" [disabled]="plannerTaskFilter===plannerTaskFilterEnum.TODO">TODO</button>
       </div>
