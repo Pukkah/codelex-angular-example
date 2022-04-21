@@ -5,10 +5,12 @@
 .planner-title {
   text-align: center;
 }
+
 .planner-container {
   display: flex;
   justify-content: center;
 }
+
 .planner {
   background-color: mistyrose;
   padding: 20px;
@@ -53,6 +55,13 @@
   }
 }
 
+.planner-progress {
+  width: 100%;
+  height: 32px;
+  accent-color: hotpink;
+
+}
+
 .planner-task {
   display: flex;
 }
@@ -60,6 +69,10 @@
 .planner-task-checkbox {
   width: 20px;
   height: 20px;
+}
+
+.task-done {
+  text-decoration: line-through;
 }
 
 .planner-filter-btn-container {
@@ -84,5 +97,6 @@
 
   &:disabled {
     background-color: lightpink;
+    cursor: not-allowed;
   }
 }

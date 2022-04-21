@@ -61,4 +61,8 @@ export class PlannerWithCheckboxesAndFilterComponent {
     }
   }
 
+  getProgress(): number {
+    return this.tasks.filter(task=>task.done).length;
+  }
+
 }
