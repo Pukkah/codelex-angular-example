@@ -1,0 +1,53 @@
+<section class="login-form-section">
+
+  <h1>Login</h1>
+
+  <div class="login-form-container">
+
+    <div class="form-image-container">
+      <img class="form-image" src="assets/images/standard60pct.png" alt="60-keyboard"/>
+    </div>
+
+    <form [formGroup]="loginForm" class="login-form">
+
+      <div class="form-item">
+        <label for="email">Email</label>
+        <input
+          [ngClass]="{'input-error': loginForm.controls['email'].touched && loginForm.controls['email'].invalid }"
+          formControlName="email"
+          id="email"
+          type="email"/>
+        <small
+          *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')"
+          class="form-error">
+          Required!
+        </small>
+        <small
+          *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('email')"
+          class="form-error">
+          Invalid email!
+        </small>
+      </div>
+
+      <div class="form-item">
+        <label for="password">Password</label>
+        <input formControlName="password" id="password" type="password"/>
+      </div>
+
+      <div class="form-item">
+        <select formControlName="country">
+          <option value="" disabled>Choose a country</option>
+          <option *ngFor="let country of countries" [value]="country.countryCode">{{ country.title }}</option>
+        </select>
+      </div>
+
+      <div class="login-btn-container">
+        <button (click)="login()" class="login-btn">Login</button>
+      </div>
+
+      {{ exampleValue }}
+
+    </form>
+  </div>
+
+</section>
