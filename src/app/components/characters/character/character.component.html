@@ -1,0 +1,38 @@
+<section>
+
+  <div class="btn-container">
+    <button routerLink="/characters" class="back-btn">Go back</button>
+  </div>
+
+  <div *ngIf="character$ | async as character" class="characters-container">
+
+    <div class="character-image-container">
+      <img [src]="character.image" alt="{{ character.name }}" class="character-image"/>
+    </div>
+
+    <div class="character-description">
+
+      <h1 class="character-title">{{ character.name }} (#{{ character.id }})</h1>
+
+      <p>{{ character.species }} {{ character.gender }}</p>
+      <p [ngClass]="'status-'+character.status.toLowerCase()">
+        <b>Status: </b>
+        {{ character.status }}
+      </p>
+      <p>
+        <b>Origin: </b>
+        {{ character.origin.name }}
+      </p>
+      <p>
+        <b>Location: </b>
+        {{ character.location.name }}
+      </p>
+      <p>
+        <b>Created: </b>
+        {{ character.created | date: 'dd.MM.yyyy' }}
+      </p>
+    </div>
+
+  </div>
+
+</section>

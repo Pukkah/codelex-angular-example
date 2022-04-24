@@ -1,0 +1,21 @@
+.characters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.characters-section-title {
+  text-align: center;
+}
+
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.characters-card-container {
+  display: flex;
+  justify-items: center;
+}

@@ -1,0 +1,44 @@
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.back-btn {
+  border: none;
+  background-color: teal;
+  border-radius: 4px;
+}
+
+.characters-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .characters-container {
+    flex-direction: column;
+    align-items: start;
+  }
+
+}
+
+.character-image {
+  border-radius: 50%;
+}
+
+// STATUS
+.status-alive {
+  color: green;
+}
+
+.status-dead {
+  color: red;
+}
+
+.status-unknown {
+  color: gray;
+}
